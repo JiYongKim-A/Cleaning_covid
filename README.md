@@ -5,11 +5,7 @@
 <br>
 	
 # Cleaning covid-19
-<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">
- <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
-
-<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"> 
-<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 
 
@@ -32,7 +28,7 @@
 
 ### DB 설계도
 
-<img width="1141" alt="스크린샷 2022-11-09 오후 3 57 36" src="https://user-images.githubusercontent.com/81874493/200760907-52c8abd8-acc2-4eb2-ab3b-5c4111b0f8ef.png">
+<img width="559" alt="스크린샷 2022-11-11 오후 7 07 07" src="https://user-images.githubusercontent.com/81874493/201317462-c58c8774-3095-4b2a-b76b-6eacfa6aeea8.png">
 
 <br>
 
@@ -62,7 +58,7 @@ ex)
 
 ## 🚀 프로젝트 실행 방법
 
-* pygame 폴더의 "실행시 꼭 읽어주세요.md" 파일을 읽고 절차에 따라 실행시켜주세요
+* pygame 폴더의 "HowToRun.md" 파일을 읽고 절차에 따라 실행시켜주세요
 
 <br>
 
