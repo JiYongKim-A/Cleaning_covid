@@ -1,19 +1,21 @@
 # 0. 모듈 import
+#-*-coding:utf-8-*-
 import pygame  # pygame 모듈 사용
 import random  # random이 필요함
 import pymysql  # MYSQL 서버 모듈
 import time  # 시간측정을 위해 time
 import os # 파일경로 사용을 위한 os 모듈 사용
-
+from dotenv import load_dotenv
+load_dotenv();
 
 
 # 1. 게임 초기화
 pygame.init()  # 초기화 시켜주지 않을 시 라이브러리가 정상 작동 안할 수 도 있음
 
 # 변경사항@@@
-conn = pymysql.connect(host= 'localhost', user= 'user', password= 'password', db= 'pygame', charset="utf8") # LOCAL DB 연결
+conn = pymysql.connect(host= os.environ.get('host'), user= os.environ.get('user'), password= os.environ.get('password'), db= os.environ.get('db'), charset="utf8") # LOCAL DB 연결
 curs = conn.cursor()
-sql = "select * from shooting_game" #SQL문
+sql = "select * from "+ os.environ.get('table') #SQL문
 
 curs.execute(sql)
 rows = curs.fetchall()
@@ -520,7 +522,7 @@ while finishpage ==2:
             elif event.key == pygame.K_RETURN:
                 
                 curs = conn.cursor()
-                sql = """insert into shooting_game (name,score)  
+                sql = """insert into """ + os.environ.get('table')+ """ (name,score)  
                     values(%s,%s)"""
                 # 쿼리문 sql 문에 넣기
                 curs.execute(sql, (text1, score))
@@ -555,7 +557,7 @@ while finishpage == 3:
     finish2background = pygame.transform.scale(finish2background, (game_size))  # 배경화면 사이즈 조정
     screen.blit(finish2background, (0, 0))
     sql = ""
-    sql = "select * from shooting_game where score>0  order by score desc limit 5"
+    sql = "select * from "+ os.environ.get('table')+ " where score>0  order by score desc limit 5"
     curs.execute(sql)
     rows = curs.fetchall()
     font = pygame.font.SysFont('malgungothic', 36)
